@@ -142,7 +142,7 @@ app.directive('paginationTemplate', function($timeout) {
 			     }
 			 }, true);
 
-            $scope.$watch('[gridOptions.filterOptions]', function (newVal, oldVal) {
+            $scope.$watch('[gridOptions.pagingOptions.pageSize,gridOptions.filterOptions]', function (newVal, oldVal) {
 			    if (newVal !== oldVal) {
 			    	$scope.gridOptions.pagingOptions.currentPage= 1;
 			    	$scope.setPagingData();
